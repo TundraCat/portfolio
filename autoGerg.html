@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pageStyle.css">
+        <style>
+        h1
+        {
+            font-size: 300%;
+        }
+        img
+        {
+            width: 33%;
+        }
+        .gallery
+        {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transform: rotate(90deg);
+            margin-top: 10%;
+            margin-bottom: 0;
+        }
+        div.arrows
+        {
+            width: 100px;
+            margin: 0 auto;
+            padding-top: 7%;
+            padding-bottom: 10%;
+        }
+        </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li><a class="menu" href="AvitiaResume.pdf">Resume</a></li>
+            <li><a class="menu" href="https://github.com/Gavitia">Github</a></li>
+            <li><a class="menu" href="contact.html">Contact</a></li>
+            <li><a class="menu" href="projects.html">Projects</a></li>
+            <li><a class="menu" href="aboutMe.html">About Me</a></li>
+            <li><a class="menu" href="index.html" >Home</a></li>
+        </ul> 
+        <div>
+            <h1>Auto Gerg</h1>
+            <h2>(A new take on autobattlers)</h3>
+            <p>
+                Auto Gerg is a project my friends and I designed for
+                Game Design and Human-Centered Computing classes.
+                We wanted to make an autobattler much like TFT,
+                or Auto Chess, but we wanted to make it our own.
+                That is where Gerg came in. The name Gerg is a play
+                on our friend's name Greg, (which was just his name
+                spelled backwards,) who was the previous president of
+                the game development club. Greg was a good friend of
+                ours who graduated the semester before and because Gerg
+                had become a meme within the Game Dev Club, we decided
+                to use the name as a stepping stone in our game. One of
+                the classes the characters in the game was called the
+                cultists which ideally would summon GERG if the
+                requirements were met who was designed to be one of
+                the more powerful characters the player could use.
+            </p>
+            <h2>Gameplay</h2>
+            <p>
+                Auto Gerg was designed to be an autobattler similar to TFT
+                and Auto Chess. If you are not familiar with these games,
+                they are essentially several players picking and choosing
+                characters and setting them on their side of the field.
+                The player's characters then fight one another.
+            </p>
+            <p>
+                For our game we decided to make a 2-player local version of 
+                autobattlers. We made several characters split into 3
+                different classes, each with their own stats, strenghts
+                and weaknesses. Although with the time we were given, we did
+                not quite get the chance to finish the game, We managed to
+                have a decent prototype for what we wanted the game to
+                become. The game lacked character models and animations
+                above all else since we did not have anyone on our team
+                capable of doing that. However what we did have the
+                knowledge and skills to do, we ensured that we put our
+                all into it.
+            </p>
+            <h1><a href="https://github.com/TheJMaster28/Auto-Gerg">Github</a></h1>
+            
+            <a target="_blank" href="images/autoGerg/autoGergGameBoard.JPG">
+                <img src="images/autoGerg/autoGergGameBoard.JPG" alt="Game Board">
+            </a>
+            
+            <a target="_blank" href="images/autoGerg/autoGergPlayerTurn.JPG">
+                <img src="images/autoGerg/autoGergPlayerTurn.JPG" alt="Player Board">
+            </a>
+            
+            <a target="_blank" href="images/autoGerg/autoGergBattle.JPG">
+                <img src="images/autoGerg/autoGergBattle.JPG" alt="Game Battle">
+            </a>
+
+            <h2 style="text-align:center;">Concept Sketches</h2>
+            <p style="text-align:center;">Below are a few concepts we had for future implementations,
+                characters, and other information.
+            </p>
+            <img class="gallery" src="images/autoGerg/characterStats.jpg" alt="Character Stats">
+            <img class="gallery" src="images/autoGerg/characterItems.jpg" alt="Character Items">
+            <img class="gallery" src="images/autoGerg/characterRaces.jpg" alt="Character Races">
+            <img class="gallery" src="images/autoGerg/characterClassAndBuffs.jpg" alt="Character Classes and Buffs">
+            <img class="gallery" src="images/autoGerg/characters1.jpg" alt="Characters">
+            <img class="gallery" src="images/autoGerg/characters2.jpg" alt="Characters2">
+            
+            <div class="arrows">
+                <button class="leftArrow" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="rightArrow" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+            
+        </div>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("gallery");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+    </body>
+</html>

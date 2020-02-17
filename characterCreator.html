@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pageStyle.css">
+        <style>
+        .gallery
+        {
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            margin-bottom: 0;
+        }
+        div.arrows
+        {
+            width: 100px;
+            padding-top: 1%;
+            margin: 0 auto;
+            padding-bottom: 10%;
+        }
+        </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li><a class="menu" href="AvitiaResume.pdf">Resume</a></li>
+            <li><a class="menu" href="https://github.com/Gavitia">Github</a></li>
+            <li><a class="menu" href="contact.html">Contact</a></li>
+            <li><a class="menu" href="projects.html">Projects</a></li>
+            <li><a class="menu" href="aboutMe.html">About Me</a></li>
+            <li><a class="menu" href="index.html" >Home</a></li>
+        </ul> 
+        <div>
+            <h1>Dungeons & Dragons Character Creator</h1>
+            <h2>Concept</h2>
+            <p>
+                In this project, my group wanted to create a local
+                application that would allow the user to create a
+                Dungeons and Dragons character and display the character's
+                information on a screen.
+            </p>
+            <p>
+                The biggest issue with this project was that we did not have
+                any experience at the time with databases, so we ended up
+                having to find a work-around for it. Our final version
+                only allowed for a few races, classes, and backgrounds, but
+                it ultimately had several nice components that were worth
+                keeping.
+            </p>
+            <p>
+                This character creator has 4 character slots that can be
+                used to store character information. The user can set up
+                name, race, subrace, class, background, and alignment for
+                their characters. They can also enter their character's
+                stats along with proper modifiers for them. The last page
+                in the app allows for the user to view the character's
+                information and store it in the character slot of their
+                choice.
+            </p>
+            <h2>Future Implementations</h2>
+            <p>
+                I want to recreate this application again in the future
+                and by then I hope to have a better understanding of
+                databases so that I could create a better character creator
+                that will be a useful implementation for  Dungeons and
+                Dragons. I want the future of this app to help the player
+                streamline the process of creating characters and will help
+                them access all of their character's information. Ideally,
+                this app will be the only thing that the player will need
+                to use to play the game. 
+            </p>
+            <p>
+                In order to do this, I will first need to create a databases
+                that will contain all of the information that is available
+                to D&D players. I will then need to use SQL to be able to
+                manage the database and I will need to create the rest of
+                the app in a way that will allow the user to make and
+                portray their characters information. I know that I have
+                to do before I could make a version of this app that i
+                could actually be happy with, but I hope that at some point,
+                I will be able to come back to this project and make a
+                way better version of it.
+            </p>
+            <h1><a href="https://github.com/MvSvlc/Character-Creator">Github</a></h1>
+            
+            <img class="gallery" src="images/characterCreator/mainPage.JPG" alt="Main Page">
+            <img class="gallery" src="images/characterCreator/generalPage.JPG" alt="General Page">
+            <img class="gallery" src="images/characterCreator/statPage.JPG" alt="Stat Page">
+            <img class="gallery" src="images/characterCreator/overviewPage.JPG" alt="Overview Page">
+            <img class="gallery" src="images/characterCreator/mainPageFull.JPG" alt="Full Characters">
+            <div class="arrows">
+                <button class="leftArrow" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="rightArrow" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+
+        </div>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("gallery");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+    </body>
+</html>

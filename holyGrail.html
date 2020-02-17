@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="pageStyle.css">
+        <style>
+        .gallery
+        {
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            margin-bottom: 0;
+        }
+        div.arrows
+        {
+            width: 100px;
+            margin: 0 auto;
+            padding-top: 5%;
+            padding-bottom: 10%;
+        }
+        </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li><a class="menu" href="AvitiaResume.pdf">Resume</a></li>
+            <li><a class="menu" href="https://github.com/Gavitia">Github</a></li>
+            <li><a class="menu" href="contact.html">Contact</a></li>
+            <li><a class="menu" href="projects.html">Projects</a></li>
+            <li><a class="menu" href="aboutMe.html">About Me</a></li>
+            <li><a class="menu" href="index.html" >Home</a></li>
+        </ul>
+        <div>
+            <h1>Meowsers Trousers and the Quest for the Holy Grail</h1>
+            <h2>Game Jam</h2>
+            <p>
+                Game Development Club had an in-house Game Jam in November
+                2018 in which all club members worked on a single game for
+                48 hours. The game concepts we had to include were upgrades
+                and masquarade. This game concept evolved into what would
+                come to be known as Meowsers Trousers and the Quest for the
+                Holy Grail.
+            </p>
+            <h2>Concept</h2>
+            <p>
+                The ultimate goal for the game was to play as Meowser and
+                go on a quest to retrieve the Holy Grail. You used your
+                sword to fight, which was upgradable from one level to the
+                next. On the quest you would come to battle incarnations
+                of the seven deadly sins (of which we had completed 2, )
+            </p>
+
+            <img class="gallery" src="images/holyGrail/main.JPG" alt="Main Page">
+            <img class="gallery" src="images/holyGrail/settings.JPG" alt="Settings Page">
+            <img class="gallery" src="images/holyGrail/doors.JPG" alt="Level Select Page">
+            <img class="gallery" src="images/holyGrail/lust.JPG" alt="Lust Level">
+            <img class="gallery" src="images/holyGrail/pause.JPG" alt="Pause Menu">
+            <img class="gallery" src="images/holyGrail/envy.JPG" alt="Envy Level">
+            <img class="gallery" src="images/holyGrail/gameOver.JPG" alt="Game Over Screen">
+            <div class="arrows">
+                <button class="leftArrow" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="rightArrow" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("gallery");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+    </body>
+</html>
