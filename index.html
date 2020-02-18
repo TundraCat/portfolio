@@ -3,11 +3,95 @@
     <head>
         <link rel="stylesheet" href="pageStyle.css">
         <style>
+        /*image carousel*/
+        img
+        {
+            height: 230px;
+            padding-bottom: 50px;
+        }
+        #container
+        {
+            width: 100%;
+            overflow: hidden;
+            margin: 50px auto;
+            padding-top: 40px;
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+        .photobanner
+        {
+            height: 233px;
+            width: 3550px;
+            padding-bottom: 50px;
+            padding-top: 50px;
+            padding-left: 0%;
+            padding-right: 0%;
+        }
+
+        /*movement animations for images*/
+        .first
+        {
+            -webkit-animation: bannermove 30s linear infinite;
+            -moz-animation: bannermove 30s linear infinite;
+            -ms-amimation: bannermove 30s linear infinite;
+            -o-animation: bannermove 30s linear infinite;
+            animation: bannermove 30s linear infinite;
+        }
+        @keyframes "bannermove"
+        {
+            0% {margin-left: 0px;}
+            100% {margin-left: -3322px;}
+        }
+        @-moz-keyframes  "bannermove"
+        {
+            0% {margin-left: 0px;}
+            100% {margin-left: -3322px;}
+        }
+        @-webkit-keyframes "bannermove"
+        {
+            0% {margin-left: 0px;}
+            100% {margin-left: -3322px;}
+        }
+        @-ms-keyframes "bannermove"
+        {
+            0% {margin-left: 0px;}
+            100% {margin-left: -3322px;}
+        }
+        @-o-keyframes "bannermove"
+        {
+            0% {margin-left: 0px;}
+            100% {margin-left: -3322px;}
+        }
+
+        /*image hover animation*/
+        .photobanner img
+        {
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+ 
+        .photobanner img:hover
+        {
+            -webkit-transform: scale(1.5);
+            -moz-transform: scale(1.5);
+            -o-transform: scale(1.5);
+            -ms-transform: scale(1.5);
+            transform: scale(1.5);
+            cursor: pointer;
+            -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+            box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+        }
+
+        /*Name and description*/
         div.main
         {
             color: black;
             text-align: center;
-            padding-top: 18%;
+            padding-top: 0px;
             padding-left: auto;
             padding-right: auto;
             
@@ -35,9 +119,36 @@
             <li><a class="menu" href="aboutMe.html">About Me</a></li>
             <li><a class="menu" href="index.html" >Home</a></li>
         </ul class="head"> 
+        <div id="container">
+            <div class="photobanner">
+                <img class="first" src="images/characterCreator/generalPage.JPG" alt="CC General">
+                <img src="images/autoGerg/autoGergGameBoard.JPG" alt="AG Game Board">
+                <img src="images/characterCreator/mainPage.JPG" alt="CC Main">
+                <img src="images/holyGrail/main.JPG" alt="HG Main">
+                <img src="images/autoGerg/autoGergPlayerTurn.JPG" alt="AG Player Turn">
+                <img src="images/characterCreator/overviewPage.JPG" alt="CC Overview">
+                <img src="images/autoGerg/autoGergBattle.JPG" alt="AG Battle">
+                <img src="images/holyGrail/lust.JPG" alt="HG lust">
+                <img src="images/characterCreator/generalPage.JPG" alt="CC General">
+                <img src="images/autoGerg/autoGergGameBoard.JPG" alt="AG Game Board">
+                <img src="images/characterCreator/mainPage.JPG" alt="CC Main">
+                <img src="images/holyGrail/main.JPG" alt="HG Main">
+                <img src="images/autoGerg/autoGergPlayerTurn.JPG" alt="AG Player Turn">
+                <img src="images/characterCreator/overviewPage.JPG" alt="CC Overview">
+                <img src="images/autoGerg/autoGergBattle.JPG" alt="AG Battle">
+                <img src="images/holyGrail/lust.JPG" alt="HG lust">
+                
+            </div>
+        </div>
         <div class="main">
             <h1>Guillermo Avitia</h1>
-            <p>Welcome to my work</p>
+            <p>
+                My ultimate goal in life is to create something for this
+                world. Over the past few years I have discovered that I
+                really enjoy working on developing software and I hope to
+                use these skills that I have worked on improving to help
+                create something real in this world.
+            </p>
         </div>
     </body>
 </html>
