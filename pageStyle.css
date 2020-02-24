@@ -23,6 +23,7 @@ li a.menu
     color: black;
     display: block;
     float: right;
+    font-size: 125%;
 }
 li a.menu:hover
 {
@@ -35,8 +36,30 @@ div
     padding-left: 5%;
     padding-right: 5%;
 }
+.arrows
+{
+    padding-right: 0;
+    padding-left: 0;
+}
+.arrows button
+{
+    font-size: 200%;
+    padding-left: 12px;
+    padding-right: 12px;
+    
+}
 
 h1{font-size: 300%;}
 h2{font-size: 200%;}
 h3{font-size: 150%;}
-p{font-size: 150%;}
+p {font-size: 150%;}
+
+@media only screen and (max-width: 760px)
+{
+    li a.menu
+    {
+        font-size: 200%;
+        line-height: 25px;
+    }
+    .arrows button{font-size: 500%;}
+}
